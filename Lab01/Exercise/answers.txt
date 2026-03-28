@@ -1,0 +1,13 @@
+TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỂN THÔNG
+BÁO CÁO LAB 01
+Môn: Thực hành OOP
+Họ và tên	Phạm Ngọc Minh
+MSSV	202416985
+
+Bài 6.1:
+•	What happens if users choose “Cancel”?
+-	Màn hình hiển thị “ You’ve chosen: No”
+•	How to customize the options to users, e.g. only two options: “Yes” and “No”, OR “I do” and “I don’t” (Suggestion: Use Javadocs or using Eclipse/Netbean IDE help).
+-	Dùng JOptionPane.showOptionDialog để tùy chỉnh được nội dung của nút chọn
+-	Trường hợp chỉ cần Yes/ No, ta có thể sử dụng JOptionPane.showConfirmDialog 
+	Ví dụ: JOptionPane.showConfirmDialog(null, "Do you want to change to the first class ticket?","Ticket Upgrade", JOptionPane.YES_NO_OPTION );
