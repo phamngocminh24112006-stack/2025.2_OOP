@@ -44,4 +44,9 @@ public class DigitalVideoDisc {
 		this.length = length;
 		this.cost = cost;
 	}
+	@Override
+	public String toString() {
+		return "DVD - " + title + " - " + category + " - "
+				+ director + " - " + length +": " + cost + " $";
+	}
 }
