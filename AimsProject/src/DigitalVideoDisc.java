@@ -1,5 +1,6 @@
 public class DigitalVideoDisc {
 	private static int nbDigitalVideoDiscs = 0;
+
 	
 	private int id;
 	private String title;
@@ -28,6 +29,7 @@ public class DigitalVideoDisc {
 	public int getId() {
 		return id;
 	}
+
 	public DigitalVideoDisc(String title) {
 		super();
 		this.title = title;
