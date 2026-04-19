@@ -21,5 +21,6 @@ public class Aims {
 		//print total cost of the items in the cart
 		//System.out.println ("Total Cost is: ");
 		System.out.println (anOrder.totalCost());
+		anOrder.print();
 	}
 }
