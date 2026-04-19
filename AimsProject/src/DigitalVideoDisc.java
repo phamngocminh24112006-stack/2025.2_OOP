@@ -1,5 +1,6 @@
 public class DigitalVideoDisc {
 	private static int nbDigitalVideoDiscs = 0;
+	
 	private int id;
 	private String title;
 	private String category;
@@ -36,12 +37,6 @@ public class DigitalVideoDisc {
 		this.title = title;
 		this.cost = cost;
 	}
-	public DigitalVideoDisc (String director, String category, String title, float cost) {
-		this.director = director;
-		this.category = category;
-		this.title = title;
-		this.cost = cost;
-	}
 	public DigitalVideoDisc (String title, String category, String director, int length, float cost) {
 		this.title = title;
 		this.category = category;
@@ -53,11 +48,13 @@ public class DigitalVideoDisc {
 		this.id = nbDigitalVideoDiscs;
 	}
 
+
 	
 	public boolean isMatch (String title) {
 		return this.title.toLowerCase().contains(title.toLowerCase());
 	}
 	
+
 	@Override
 	public String toString() {
 		return "DVD - " + title + " - " + category + " - "
