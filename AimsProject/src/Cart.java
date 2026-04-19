@@ -41,4 +41,28 @@ public class Cart {
 		return total;
 		
 	}
+	public void searchById(int id) {
+	    for (int i = 0; i < qtyOrdered; i++) {
+	        if (itemsOrdered[i].getId() == id) {
+	            System.out.println(itemsOrdered[i]);
+	            return;
+	        }
+	    }
+	    System.out.println("No matching DVD found.");
+	}
+	
+	public void searchByTitle(String title) {
+	    boolean found = false;
+
+	    for (int i = 0; i < qtyOrdered; i++) {
+	        if (itemsOrdered[i].isMatch(title)) {
+	            System.out.println(itemsOrdered[i]);
+	            found = true;
+	        }
+	    }
+
+	    if (!found) {
+	        System.out.println("No matching DVD found.");
+	    }
+	}
 }
