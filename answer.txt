@@ -1,0 +1,12 @@
+ĐẠI HỌC BÁCH KHOA HÀ NỘI
+TRƯỜNG CÔNG NGHỆ THÔNG TIN VÀ TRUYỂN THÔNG
+Môn: OOP 
+Họ và tên: Phạm Ngọc Minh
+MSSV: 202416985
+
+3. Passing parameter
+Question: Is Java a Pass by Value or Pass by Reference programming language?
+Java là ngôn ngữ sử dụng truyền bằng giá trị
+6. Open the Cart class
+Question: Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method?
+Kiểu trả về là String
