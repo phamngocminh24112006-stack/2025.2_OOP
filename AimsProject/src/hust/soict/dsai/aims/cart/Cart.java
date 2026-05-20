@@ -4,9 +4,14 @@ import java.util.ArrayList;
 
 import hust.soict.dsai.aims.media.Media;
 
+import java.util.Collections;
+
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private ArrayList<Media>  itemsOrdered = new ArrayList<Media>();
+	public ArrayList<Media> getItemsOrdered() {
+	    return itemsOrdered;
+	}
 	public void addMedia(Media media) {
 	    if (itemsOrdered.size() < MAX_NUMBERS_ORDERED) {
 	       itemsOrdered.add(media);
@@ -70,5 +75,13 @@ public class Cart {
 	    if (!found) {
 	        System.out.println("No matching DVD found.");
 	    }
+	}
+	
+	public void sortByTitle() {
+	    Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+	}
+
+	public void sortByCost() {
+	    Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
 	}
 }
