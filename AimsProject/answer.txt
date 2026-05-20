@@ -1,0 +1,13 @@
+11. Polymorphism
+Question: Observe what happens and explain in detail
+Trong project này, các lớp: Book, DigitalVideoDisc, CompactDisc đều kế thừa từ lớp Media. Vì vậy, ta có thể lưu các đối tượng khác nhau trong cùng một danh sách. Tại thời điểm chạy chương trình (runtime), Java sẽ tự động xác định đúng phương thức toString() tương ứng với kiểu đối tượng thực tế: Book.toString()DigitalVideoDisc.toString(), CompactDisc.toString().
+12. Sort media in the cart 
+- What class should implement the Comparable interface? 
+Nếu sử dụng Comparable, lớp Media nên implement interface Comparable<Media> vì tất cả các loại media như: Book, DigitalVideoDisc, CompactDisc đều kế thừa từ Media.
+- In those classes, how should you implement the compareTo()method be to reflect the ordering that we want? 
+Phương thức compareTo() sẽ định nghĩa thứ tự mặc định của các media.
+- Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach? 
+Không được.
+Với Comparable, mỗi class chỉ có: một phương thức compareTo(), tức là chỉ có một thứ tự mặc định duy nhất.
+- Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+Ta có thể tạo một Comparator riêng cho DVD
