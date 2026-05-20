@@ -2,14 +2,27 @@ package hust.soict.dsai.aims.store;
 
 import java.util.ArrayList;
 
-import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.media.Media;
 
 public class Store {
 	public static final int MAX_ITEMS_IN_STORE = 100;
 	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
-	private int qtyInStore = 0;
+	public ArrayList<Media> getItemsInStore() {
+	    return itemsInStore;
+	}
 	
+	public void print() {
+
+	    System.out.println("***********************STORE***********************");
+
+	    for (int i = 0; i < itemsInStore.size(); i++) {
+
+	        System.out.println((i + 1) + ". "
+	                + itemsInStore.get(i).toString());
+	    }
+
+	    System.out.println("***************************************************");
+	}
 	public void addMedia (Media media) {
 		if (itemsInStore.size() < MAX_ITEMS_IN_STORE) {
 			itemsInStore.add(media);
