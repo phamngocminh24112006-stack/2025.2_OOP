@@ -1,26 +1,36 @@
+
 package hust.soict.dsai.test.store;
 
 import hust.soict.dsai.aims.media.DigitalVideoDisc;
 import hust.soict.dsai.aims.store.Store;
 
 public class StoreTest {
+    public static void main(String[] args) {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		Store store = new Store();
+        /*Store hust.soict.hedspi.test1.store = new Store();
 
-        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King");
-        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars");
-        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladdin");
 
-        // Test add
-        store.addDVD(dvd1);
-        store.addDVD(dvd2);
-        store.addDVD(dvd3);
+        DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King",
+                "Animation", "Roger Allers", 87, 19.95f);
+        DigitalVideoDisc dvd2 = new DigitalVideoDisc("Star Wars",
+                "Science Fiction", "George Lucas", 87, 24.95f);
+        DigitalVideoDisc dvd3 = new DigitalVideoDisc("Aladin",
+                "Animation", 18.99f);
 
-        // Test remove
-        store.removeDVD(dvd2);
-        store.removeDVD(dvd2); 
-	}
+        hust.soict.hedspi.test1.store.addDVD(dvd1);
+        hust.soict.hedspi.test1.store.addDVD(dvd2);
+        hust.soict.hedspi.test1.store.addDVD(dvd3);
 
+
+        System.out.println("DVDs in the hust.soict.hedspi.test1.store after adding:");
+        hust.soict.hedspi.test1.store.displayStore();
+
+
+        hust.soict.hedspi.test1.store.removeDVD(dvd2);
+
+
+        System.out.println("\nDVDs in the hust.soict.hedspi.test1.store after removing:");
+        hust.soict.hedspi.test1.store.displayStore();*/
+    }
 }
+

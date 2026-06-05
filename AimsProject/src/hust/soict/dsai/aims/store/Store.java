@@ -1,42 +1,58 @@
 package hust.soict.dsai.aims.store;
 
-import java.util.ArrayList;
-
 import hust.soict.dsai.aims.media.Media;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Store {
-	public static final int MAX_ITEMS_IN_STORE = 100;
-	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
-	public ArrayList<Media> getItemsInStore() {
-	    return itemsInStore;
-	}
-	
-	public void print() {
 
-	    System.out.println("***********************STORE***********************");
+    private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
-	    for (int i = 0; i < itemsInStore.size(); i++) {
+    // Getter va Setter
+    public List<Media> getItemsInStore() {
+        return itemsInStore;
+    }
 
-	        System.out.println((i + 1) + ". "
-	                + itemsInStore.get(i).toString());
-	    }
+    public void setItemsInStore(List<Media> itemsInStore) {
+        this.itemsInStore = (ArrayList<Media>) itemsInStore;
+    }
 
-	    System.out.println("***************************************************");
-	}
-	public void addMedia (Media media) {
-		if (itemsInStore.size() < MAX_ITEMS_IN_STORE) {
-			itemsInStore.add(media);
-			System.out.println ("The media has been added to the store");
-		} else {
-			System.out.println ("The store is full");
-		}
-	}
-	
-	public void removeMedia (Media media) {
-		if (itemsInStore.remove(media)) {
-			System.out.println ("The media has been removed from the store");
-		} else {
-			System.out.println ("The media was not found in the store");
-		}
-	}
+    public void removeMedia(Media media) {
+        if (itemsInStore.remove(media)) {
+            System.out.println("The dvd with title " + media.getTitle() + " has been removed from the hust.soict.hedspi.test1.cart");
+        } else {
+            System.out.println("Can not found the dvd with title " + media.getTitle());
+        }
+    }
+
+    public void addMedia(Media media){
+        if (!itemsInStore.contains(media)){
+            itemsInStore.add(media);
+            System.out.println("Added Media: " + media);
+        }
+    }
+
+    public void displayStore(){
+        System.out.println("**********************CART***********************\n");
+        if (itemsInStore.isEmpty()) {
+            System.out.println("There are no dvds in the hust.soict.hedspi.test1.store");
+        }else{
+            for(int i=0; i<itemsInStore.size(); i++){
+                int j=i+1;
+                System.out.println(j + ". " + itemsInStore.get(i).toString());
+            }
+        }
+    }
+
+    public Media findMediaByTitle(String title) {
+        for (Media media : itemsInStore) {
+            if (media.getTitle().equalsIgnoreCase(title)) {
+                return media;
+            }
+        }
+        return null;
+    }
 }
+
+

@@ -3,16 +3,31 @@ package hust.soict.dsai.aims.media;
 import java.util.Comparator;
 
 public class MediaComparatorByTitleCost implements Comparator<Media> {
-
     @Override
-    public int compare(Media m1, Media m2) {
-
-        int titleCompare = m1.getTitle().compareTo(m2.getTitle());
-
-        if (titleCompare != 0) {
-            return titleCompare;
+    public int compare(Media media1, Media media2) {
+        try {
+            if (media1.getTitle().compareTo(media2.getTitle()) > 0) {
+                return -1;
+            } else if (media1.getTitle().compareTo(media2.getTitle()) < 0) {
+                return 1;
+            } else {
+                if (media1.getCost() > media2.getCost()) {
+                    return -1;
+                } else if (media1.getCost() < media2.getCost()) {
+                    return 1;
+                }
+            }
+        } catch (NullPointerException e) {
+            if (media1.getTitle() == null && media2.getTitle() == null) {
+                return -1;
+            }
+            if (media1.getTitle() == null && media2.getTitle() != null) {
+                return -1;
+            }
+            if (media1.getTitle() != null && media2.getTitle() == null) {
+                return 1;
+            }
         }
-
-        return Float.compare(m2.getCost(), m1.getCost());
+        return 0;
     }
 }
